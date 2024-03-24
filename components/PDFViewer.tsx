@@ -6,6 +6,8 @@ import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
+//default function
+
 export default function PDFViewer() {
   const [file, setFile] = useState<string | File>("uploads/sample.pdf");
   const [numPages, setNumPages] = useState<number>(0);
@@ -16,6 +18,8 @@ export default function PDFViewer() {
     }
   }
 
+  //onDocumentLoadSuccess function
+  
   function onDocumentLoadSuccess({
     numPages: nextNumPages
   }: {
